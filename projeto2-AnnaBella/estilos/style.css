@@ -30,7 +30,18 @@ body{
     color: #9e9e87;
     font-size: 22px;
 }
+.img-ad-campaigns{
+    border: 15px #9e9e87 solid;
+}
+.contact-forms {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
+.contact-form{
+    margin-top: 0;
+    margin-bottom: 0;
+}
 .footer-content{
     font-weight: bold;
     text-align: center;
