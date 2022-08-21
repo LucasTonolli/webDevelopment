@@ -1,0 +1,71 @@
+/*Estrutura do site*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #fff url(../imagens/fundo.png) repeat-x;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container{
+    width:700px;
+    margin: 0 auto;
+}
+
+#header{
+    height: 150px;
+    background: url(../imagens/detalhe-topo.png) no-repeat right top;
+    padding-top: 25px;
+}
+
+.logo{
+    width:152px;
+    height: 66px;
+    background: url(../imagens/logo.png) no-repeat center;
+    text-indent: -3000px;
+}
+
+/*Nav*/
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none ;
+}
+
+#header ul{
+    background: #b10333;
+    margin-top:30px ;
+    float: left;
+}
+
+#header ul li{
+    float: left;
+}
+
+#header ul li > a{
+    font-size: .9em;
+    display: block;
+    padding: .5em 1.5em;
+    line-height: 2.1em;
+    text-decoration: none;
+    color: #fff;
+    background: url(../imagens/divisor.png)no-repeat left center;
+}
+#header ul .primeiro a{
+    background: none;
+}
+
+#header #nav a:hover{
+    color: #69001d;
+}
+
+body.home #nav a#home,
+body.brasil #nav a#brasil,
+body.internacional #nav a#internacional,
+body.photos #nav a#photos{
+    background:#de003e ;
+    color: #fff;
+    cursor: text;
+}
