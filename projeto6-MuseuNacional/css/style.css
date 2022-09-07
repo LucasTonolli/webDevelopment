@@ -1,0 +1,171 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+}
+
+body{
+    background: #f4f2ec url(../img/fundo.png) repeat-x;
+}
+
+a:link, a:active, a:visited{
+    color:#af670a;
+}
+
+a:hover{
+    color: #227115;
+}
+
+#container{
+    width: 1080px;
+    margin: 0 auto;
+}
+#header{
+    height: 55px;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#header nav{
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
+}
+
+.logo{
+    width: 248px;
+    height: 21px;
+}
+#header ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#header .navigation li{
+    padding: 0 10px;
+}
+#header .nav-item{
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#header .nav-item:hover{
+    border-bottom: 1px solid #535858 ;
+}
+
+/*Content*/
+#content{
+    height: 850px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#side-content{
+    width: 350px;
+    background-color: #d6ceb5;
+}
+#side-content #visit{
+    background-color: #b8b19c;
+    padding: 10px 20px;
+    margin-top: 15px;
+}
+
+#visit h4, #gallery h4{
+    text-transform: uppercase;
+    color:#574228;
+    margin-bottom: 5px;   
+}
+#visit input[type="date"]{
+    width: 80px;
+}
+#visit input[type="number"]{
+    width: 40px;
+}
+
+#visit button{
+    margin: 10px 0;
+    padding: 10px 10px;
+    background-color: #5e4f41 ;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#gallery{
+    padding: 10px 30px;
+}
+#gallery .gallery{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;   
+}
+
+#gallery .gallery-photo{
+    background: url(../img/fundo-foto.png) no-repeat;
+    padding: 16px 15px 18px 15px;
+    margin: 10px 0 0 20px;
+}
+#gallery .gallery-photo img{
+    margin-left: 1px;
+    margin-top: 2px;
+}
+
+/*Main content*/
+#main-content section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#main-content section div{
+    margin: 0 30px;
+    width: 300px;
+    margin-bottom: 30px;
+}
+#main-content h2{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #18500f;
+}
+
+#main-content #exhibitions li > a{
+    color:#af670a;
+    text-decoration: none;
+}
+
+
+#main-content #about a{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*Footer*/
+.divider{
+    margin: 30px auto;
+    width: 600px;
+    border-top: 1px solid #889191;
+}
+footer ul{
+    font-size: 18px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer li{
+    padding: 5px 10px;
+}
+
+footer li span{
+    color: #af670a;
+}
+
+footer a{
+    text-decoration: none;
+    color: #574228 ;
+}
