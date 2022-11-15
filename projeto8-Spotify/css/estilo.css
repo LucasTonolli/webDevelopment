@@ -5,6 +5,7 @@
 /* Layout */
 html, body, #home{
     height: 100%;
+    overflow-x: hidden;
 }
 body{
     background: url(../imagens/capa.png),
@@ -42,18 +43,11 @@ nav.navbar-transparent{
     text-align: center;
 }
 
-.capa h1{
-    font-weight: 500;
-    letter-spacing: -0.05em;
-    margin-bottom: 50px;
-    color: #fff;
-}
-
 .capa .btn-custom{
     color: #fff;
     border-radius: 500px;
     text-transform: uppercase;
-    transition: color 0.4s ease-in;
+    transition: background-color 0.5s ease-in, color 0.4s ease-in;
     padding: 10px 20px;
 }
 
@@ -71,6 +65,52 @@ nav.navbar-transparent{
 .btn-custom.btn-white:hover{
     background-color: #fff;
     color: #000;
+}
+.section-box{
+    padding: 20px 0;
+}
+/*Servicos*/
+#servicos{
+    background-color: #fff;
+}
+#servicos .albuns{
+    padding: 10px 0;
+}
+
+#servicos h2, #servicos h3{
+    color: #7c25f8;
+}
+/* Recursos */
+#recursos{
+    color: #fff;
+}
+
+#recursos h3{
+    color:#9bf0e1;
+}
+
+#recursos .rotation{
+    transform: rotate(30deg);
+    padding-left: 80px;
+}
+/* Typography */
+h1{
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+h2{
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+h3{
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: -0.04em;
 }
 /* Mobile */
 @media (max-width: 575.98px) {
