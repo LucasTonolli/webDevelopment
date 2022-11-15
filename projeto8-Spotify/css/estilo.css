@@ -69,6 +69,11 @@ nav.navbar-transparent{
 .section-box{
     padding: 20px 0;
 }
+
+#carousel-hero .carousel-control-prev,
+#carousel-hero .carousel-control-next{
+    width: 5%;
+}
 /*Servicos*/
 #servicos{
     background-color: #fff;
