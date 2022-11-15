@@ -93,6 +93,28 @@ nav.navbar-transparent{
     transform: rotate(30deg);
     padding-left: 80px;
 }
+/* Footer */
+footer{
+    background-color: #000;
+    padding: 50px 0 20px 0;
+    position: relative;
+}
+
+footer h4{
+    color: #919496;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+footer .navbar-nav a{
+    color: #fff;
+    font-size: 0.8em;
+}
+footer .navbar-nav a:hover{
+    color: #9bf0e1;
+    text-decoration: none;
+}
 /* Typography */
 h1{
     font-weight: 500;
@@ -116,6 +138,7 @@ h3{
 @media (max-width: 575.98px) {
     .btn-custom{
         margin: 10px 15px;
+        font-size: 1em;
     }
 }
 
@@ -125,6 +148,7 @@ h3{
     }
     .btn-custom{
         margin: 10px 15px;
+        font-size: 1em;
     }
  }
 
