@@ -16,31 +16,31 @@
         </div>
         <div id="container-button">
             <div class="row">
-                <button type="button" class="option large-button" onclick="clearVariables()">C</button>
-                <button type="button" class="option" value="/" onclick="chooseOperation(this.value)">/</button>
-                <button type="button" class="option" value="*" onclick="chooseOperation(this.value)">*</button>
+                <button type="button" class="option large-button" onclick="calculate('action', 'c')">C</button>
+                <button type="button" class="option" value="/" onclick="calculate('action',this.value)">/</button>
+                <button type="button" class="option" value="*" onclick="calculate('action',this.value)">*</button>
             </div>
             <div class="row">
-                <button type="button" value="7" class="option" onclick="addChar(this.value)">7</button>
-                <button type="button" value="8" class="option" onclick="addChar(this.value)">8</button>
-                <button type="button" value="9" class="option" onclick="addChar(this.value)">9</button>
-                <button type="button" class="option" value="-" onclick="chooseOperation(this.value)">-</button>
+                <button type="button" value="7" class="option" onclick="calculate('value',this.value)">7</button>
+                <button type="button" value="8" class="option" onclick="calculate('value',this.value)">8</button>
+                <button type="button" value="9" class="option" onclick="calculate('value',this.value)">9</button>
+                <button type="button" class="option" value="-" onclick="calculate('value',this.value)">-</button>
             </div>
             <div class="row">
-                <button type="button" value="4" class="option" onclick="addChar(this.value)">4</button>
-                <button type="button" value="5" class="option" onclick="addChar(this.value)">5</button>
-                <button type="button" value="6" class="option" onclick="addChar(this.value)">6</button>
-                <button type="button" class="option" value="+" onclick="chooseOperation(this.value)">+</button>
+                <button type="button" value="4" class="option" onclick="calculate('value',this.value)">4</button>
+                <button type="button" value="5" class="option" onclick="calculate('value',this.value)">5</button>
+                <button type="button" value="6" class="option" onclick="calculate('value',this.value)">6</button>
+                <button type="button" class="option" value="+" onclick="calculate('action',this.value)">+</button>
             </div>
             <div class="row">
-                <button type="button" value="1" class="option" onclick="addChar(this.value)">1</button>
-                <button type="button" value="2" class="option" onclick="addChar(this.value)">2</button>
-                <button type="button" value="3" class="option" onclick="addChar(this.value)">3</button>
-                <button type="button" class="option equal-button" onclick="calculate()">=</button>
+                <button type="button" value="1" class="option" onclick="calculate('value',this.value)">1</button>
+                <button type="button" value="2" class="option" onclick="calculate('value',this.value)">2</button>
+                <button type="button" value="3" class="option" onclick="calculate('value',this.value)">3</button>
+                <button type="button" value="=" class="option equal-button" onclick="calculate('action',this.value)">=</button>
             </div>
             <div class="row" style="margin-top: -70px;">
-                <button type="button" value="0" class="option large-button" onclick="addChar(this.value)">0</button>
-                <button type="button" value="." class="option" onclick="addChar(this.value)">.</button>
+                <button type="button" value="0" class="option large-button" onclick="calculate('value',this.value)">0</button>
+                <button type="button" value="." class="option" onclick="calculate('action',this.value)">.</button>
             </div>
         </div>
     </div>
