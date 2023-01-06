@@ -187,9 +187,16 @@ function loadCostsTable(filteredCosts = null){
         button.id = `id_cost_${d.id}`;
         button.innerHTML = '<i class="fa-solid fa-x"></i>';
         button.onclick = function(){
+
             let id = this.id.replace('id_cost_', '');
-            db.remove(id);
-            window.location.reload();
+            let buttonRemove = document.getElementsByClassName('btn-remove')[0];         
+            buttonRemove.onclick = function(){
+                db.remove(id);
+                window.location.reload();
+            }
+
+            $('#removeCostConfirm').modal('show');
+   
         };
         row.insertCell(4).append(button);
     });
