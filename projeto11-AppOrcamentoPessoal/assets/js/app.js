@@ -244,12 +244,20 @@ function statisticsCosts(){
     let elementPartial = document.getElementById('partial');
     elementPartial.classList.add('text-info');
     let partial = new Intl.NumberFormat('BRL',  { style: 'currency', currency: 'BRL' }).format(sumFilteredCosts)
+    
+    let elementPercent = document.getElementById('percent');
+    let percent = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 2 }).format((sumFilteredCosts/sumAllCosts) * 100);
+
+    if (sumFilteredCosts === 0){
+        elementPartial.innerHTML = 'Nenhuma despesa encontrada';
+        elementPercent.innerHTML = '';
+        return;
+    }
+
     elementPartial.innerHTML = `Despesas filtradas: ${partial}`;
 
-    let elementPercent = document.getElementById('percent');
-    let percent = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 2 }).format((sumFilteredCosts/sumAllCosts) * 100)
     elementPercent.innerHTML = `Essas despesas são ${percent}% da suas despesas totais`;
-    
+
     if (percent >= 80) {
         elementPercent.className = 'text-danger';
     } else if (percent >= 50){
