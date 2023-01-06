@@ -1,0 +1,10 @@
+/*
+ * Force Bootstrap v4 transitions
+ * (ignores prefers-reduced-motion media feature)
+ * https://gist.github.com/robsonsanches/33c6c1bf4dd5cf3c259009775883d1c0
+ */
+
+
+.collapsing {
+	transition:height 0.35s ease !important;
+}
