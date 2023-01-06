@@ -221,4 +221,42 @@ function filterCosts(){
     loadCostsTable(db.search(filterCost));
 }
 
+function statisticsCosts(){
+    let year = document.getElementById('year').value;
+    let month = document.getElementById('month').value;
+    let day = document.getElementById('day').value;
+    let type = document.getElementById('type').value;
+
+    let statisticCost = new Cost('', type, '', day, month, year);
+
+    let allCosts = db.loadCosts();
+    let filteredCosts = db.search(statisticCost);
+    
+    let sumAllCosts = allCosts.reduce((sum, cost) => sum + parseFloat(cost.value), 0);
+    let sumFilteredCosts = filteredCosts.reduce((sum, cost) => sum + parseFloat(cost.value), 0);
+
+    
+    let elementTotal = document.getElementById('total');
+    elementTotal.classList.add('text-info');
+    let total = new Intl.NumberFormat('BRL',  { style: 'currency', currency: 'BRL' }).format(sumAllCosts);
+    elementTotal.innerHTML = `Despesas totais: ${total}`;
+
+    let elementPartial = document.getElementById('partial');
+    elementPartial.classList.add('text-info');
+    let partial = new Intl.NumberFormat('BRL',  { style: 'currency', currency: 'BRL' }).format(sumFilteredCosts)
+    elementPartial.innerHTML = `Despesas filtradas: ${partial}`;
+
+    let elementPercent = document.getElementById('percent');
+    let percent = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 2 }).format((sumFilteredCosts/sumAllCosts) * 100)
+    elementPercent.innerHTML = `Essas despesas são ${percent}% da suas despesas totais`;
+    
+    if (percent >= 80) {
+        elementPercent.className = 'text-danger';
+    } else if (percent >= 50){
+        elementPercent.className = 'text-warning';
+    } else {
+        elementPercent.className = 'text-secondary';
+    }
+
+}
 
