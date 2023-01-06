@@ -35,10 +35,10 @@
                   <a class="nav-link" href="index.html">Cadastro</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="consulta.html">Consulta <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="consulta.html">Consulta</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="estatisticas.html">Estatísticas</a>
+                    <a class="nav-link active" href="estatisticas.html">Estatísticas <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
             </div>
@@ -65,7 +65,7 @@
             <div class="col col-4 col-md-2 mb-2">
                 <input type="number" id="day" class="form-control" min="1" max="31" placeholder="Dia"/>
             </div>
-            <div class="col col-12 col-md-6 mb-2">
+            <div class="col col-12 col-md-4 mb-2">
                 <select class="form-control" name="" id="type">
                     <option value="">Tipo</option>
                     <option value="1">Alimentação</option>
@@ -75,67 +75,15 @@
                     <option value="5">Saúde</option>
                 </select>
             </div>
-           </div>
-           <div class="row mb-4">
-            <div class="col col-sm-6 mb-2">
-                <input type="text" name="" id="description" class="form-control" placeholder="Descrição"/>
-            </div>
-            <div class="col-sm-4 mb-2">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">R$</span>
-                    </div>
-                    <input type="number" id="value" placeholder="Valor" class="form-control" step="0.01" />
-                  </div>
-            </div>
-            <div class="col col-sm-2 mb-2 text-right">
+            <div class="col col-12 col-md-2 mb-2 text-right">
                 <button class="btn btn-primary" onclick="filterCosts()" type="submit">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
            </div>
-           <div class="row">
-            <div class="col col-sm-12">
-                <table class="table table-responsive-sm">
-                    <thead>
-                      <tr>
-                        <th>Data</th>
-                        <th>Tipo</th>
-                        <th>Descrição</th>
-                        <th>Valor</th>
-                        <th>Ações</th>
-                      </tr>
-                    </thead>
-        
-                    <tbody id="costs-tbody">
-                    </tbody>
-                  </table>
-            </div>
-           </div>
         </section>
     </main>
 
-     <!-- Modal -->
-     <div class="modal fade" id="removeCostConfirm" tabindex="-1" aria-labelledby="removeCostConfirmLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header text-warning">
-            <h5 class="modal-title" id="removeCostConfirmLabel"> Excluir despesa</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <h4>Você tem certeza disso?</h4>
-            <p>A exclusão da despesa é irreversível</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-warning btn-remove">Confirmar</button>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Bootstrap JS -->
     
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
