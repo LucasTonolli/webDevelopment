@@ -39,6 +39,16 @@
                 <div class="form-group">
                   <input type="password" class="form-control" name="senha" placeholder="Senha"/>
                 </div>
+                <?php if (isset($_GET['login']) && $_GET['login'] === 'erro') : ?>
+                  <div class="text-danger">
+                    Usuário ou senha inválido!
+                  </div>
+                <?php endif;?>
+                <?php if (isset($_GET['login']) && $_GET['login'] === 'erro2') : ?>
+                  <div class="text-danger">
+                    Faça login para acessar
+                  </div>
+                <?php endif;?>
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
               </form>
             </div>
