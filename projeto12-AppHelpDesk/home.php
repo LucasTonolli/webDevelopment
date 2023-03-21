@@ -1,11 +1,4 @@
-<?php
-  session_start();
-  if (!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] === 'NÃO'):
-    header('Location: index.php?login=erro2');
-  endif; 
-
-?>
-
+<?php require_once "components/validador_acesso.php"?>
 
 <html>
   <head>
@@ -30,6 +23,12 @@
       <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="logout.php" class="nav-link text-uppercase">Sair</a>
+        </li>
+      </ul>
+      
     </nav>
 
     <div class="container">    
@@ -43,10 +42,14 @@
             <div class="card-body">
               <div class="row">
                 <div class="col-6 d-flex justify-content-center">
-                  <img src="img/formulario_abrir_chamado.png" width="70" height="70">
+                  <a href="abrir_chamado.php">
+                    <img src="img/formulario_abrir_chamado.png" width="70" height="70">
+                  </a>
                 </div>
                 <div class="col-6 d-flex justify-content-center">
-                  <img src="img/formulario_consultar_chamado.png" width="70" height="70">
+                  <a href="consultar_chamado.php">
+                    <img src="img/formulario_consultar_chamado.png" width="70" height="70">
+                  </a>
                 </div>
               </div>
             </div>
