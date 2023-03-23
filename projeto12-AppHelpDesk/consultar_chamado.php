@@ -8,8 +8,6 @@ while (!feof($file)) :
 
 endwhile;
 
-var_dump($chamados);
-
 fclose($file);
 ?>
 <html>
@@ -59,13 +57,26 @@ fclose($file);
               endif;
               ?>
               <?php $chamado = explode('#', $chamado); ?>
+              <?php if ($_SESSION['role'] === 1) : ?>
               <div class="card mb-3 bg-light">
                 <div class="card-body">
-                  <h5 class="card-title"><?= $chamado[0] ?></h5>
-                  <h6 class="card-subtitle mb-2 text-muted"><?= $chamado[1] ?></h6>
-                  <p class="card-text"><?= $chamado[2] ?></p>
+                  <h5 class="card-title"><?= $chamado[1] ?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted"><?= $chamado[2] ?></h6>
+                  <p class="card-text"><?= $chamado[3] ?></p>
                 </div>
               </div>
+              <?php else: ?>
+                <?php if ($chamado[0] != $_SESSION['userId']):?>
+                  <?php continue;?>
+                <?php endif;?>
+                <div class="card mb-3 bg-light">
+                  <div class="card-body">
+                    <h5 class="card-title"><?= $chamado[1] ?></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><?= $chamado[2] ?></h6>
+                    <p class="card-text"><?= $chamado[3] ?></p>
+                  </div>
+                </div>
+              <?php endif;?>
             <?php endforeach; ?>
 
 

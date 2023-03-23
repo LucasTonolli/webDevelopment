@@ -1,4 +1,4 @@
-<?php require_once "components/validador_acesso.php"?>
+<?php require_once "components/validador_acesso.php";?>
 
 <html>
   <head>

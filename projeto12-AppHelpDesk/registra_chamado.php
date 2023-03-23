@@ -1,8 +1,9 @@
 <?php
+    session_start();
 
     $file = fopen('chamados.txt', 'a');
 
-    $text = implode('#', $_POST);
+    $text = $_SESSION['userId']  . '#' . implode('#', $_POST);
     $text .= PHP_EOL;
 
     fwrite($file, $text);
