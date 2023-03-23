@@ -50,7 +50,7 @@
     if ($autenticacao) :
         $_SESSION['autenticado'] = 'SIM';
         $_SESSION['userId'] = $userId;
-        $_SESSION['role'] = $userId;
+        $_SESSION['role'] = $userRoleId;
         header('Location: home.php');
 
     else:

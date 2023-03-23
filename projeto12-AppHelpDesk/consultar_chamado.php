@@ -3,10 +3,24 @@
 <?php
 $file = fopen('chamados.txt', 'r');
 $chamados = [];
-while (!feof($file)) :
-  $chamados[] = fgets($file);
 
-endwhile;
+var_dump($_SESSION);
+
+if ($_SESSION['role'] == 1):
+  while (!feof($file)) :
+    $chamados[] = fgets($file);
+  endwhile;
+else:
+  while (!feof($file)) :
+    
+    $data = fgets($file);
+    $dados = explode('#', $data);
+
+    if ($dados[0] == $_SESSION['userId']):
+      $chamados[] = $data;
+    endif;
+  endwhile;
+endif;
 
 fclose($file);
 ?>
@@ -54,10 +68,8 @@ fclose($file);
             <?php foreach ($chamados as $chamado) : ?>
               <?php if (!$chamado) :
                 continue;
-              endif;
-              ?>
+              endif;?>
               <?php $chamado = explode('#', $chamado); ?>
-              <?php if ($_SESSION['role'] === 1) : ?>
               <div class="card mb-3 bg-light">
                 <div class="card-body">
                   <h5 class="card-title"><?= $chamado[1] ?></h5>
@@ -65,18 +77,6 @@ fclose($file);
                   <p class="card-text"><?= $chamado[3] ?></p>
                 </div>
               </div>
-              <?php else: ?>
-                <?php if ($chamado[0] != $_SESSION['userId']):?>
-                  <?php continue;?>
-                <?php endif;?>
-                <div class="card mb-3 bg-light">
-                  <div class="card-body">
-                    <h5 class="card-title"><?= $chamado[1] ?></h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><?= $chamado[2] ?></h6>
-                    <p class="card-text"><?= $chamado[3] ?></p>
-                  </div>
-                </div>
-              <?php endif;?>
             <?php endforeach; ?>
 
 
