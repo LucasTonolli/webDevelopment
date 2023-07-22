@@ -1,0 +1,42 @@
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>App Pesquisa Endereço</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
+	<body>
+		
+		<nav class="navbar navbar-light bg-light mb-4">
+			<div class="container">
+				<div class="navbar-brand mb-0 h1">
+					<h3>App Pesquisa Endereço</h3>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row form-group">
+				<div class="col-sm-6">
+					<input type="text" name="zipcode" class="form-control" placeholder="CEP" maxlength="9"/>
+				</div>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" name="address" placeholder="Endereço" readonly />
+				</div>
+			</div>
+
+			<div class="row form-group">
+				<div class="col-sm-6">
+					<input type="text" class="form-control" placeholder="Bairro" name="neighborhood" readonly />
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="city" placeholder="Cidade" readonly />
+				</div>
+
+				<div class="col-sm-2">
+					<input type="text" class="form-control" name="state" placeholder="UF" readonly />
+				</div>
+			</div>
+		</div>
+		<script src="buscaEndereco.js"></script>
+	</body>
+</html>
